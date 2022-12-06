@@ -154,6 +154,37 @@ theme: {
 
 <hr>
 
+## ✏  For controlling the font smoothing of an element; customize "tailwind.css" file 👇
+
+```css
+@layer base {
+    html, body {
+        @apply antialiased
+    }
+}
+```
+
+## ✏  Import "Open Sans" font (Regular 400, SemiBold 600, Bold 700) from GoogleFonts and add it to "layer base" 👇
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@layer base {
+    html, body {
+        font-family: "Open Sans", sans-serif;
+        @apply antialiased
+    }
+}
+```
+
+<hr>
+
+## 💻 Install React Icons 👇
+
+```bash
+npm install react-icons --save
+```
+
 ## 🚩 For "Header.jsx" copy the src of "getir" images from "https://getir.com/" and add the other links 👇
 
 ```javascript
