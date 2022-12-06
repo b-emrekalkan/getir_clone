@@ -61,7 +61,11 @@ npx tailwindcss init
 ```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  mode: 'jit',
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    './src/**/*.{html,js}',
+  ],
   theme: {
     extend: {},
   },
@@ -69,7 +73,7 @@ module.exports = {
 }
 ```
 
-## ✔ To add the Tailwind directives to your CSS; create "tailwind.css" file under "src" folder and add this script to "package.json" file 👇
+## ✔ To add the Tailwind directives to your CSS; create "tailwind.css" file under "src" folder, add this script to "package.json" file and run this command at the terminal 👇
 
 ```json
     "watch": "npx tailwindcss -i src/tailwind.css -o src/style.css --watch"
@@ -85,7 +89,7 @@ module.exports = {
 
 <hr>
 
-## ‼ Create "jsconfig.json" file under "src" folder to set "src" folder as Absolute Path and add 👇
+## ‼ Create "jsconfig.json" file in home directory to set "src" folder as Absolute Path and add 👇
 
 ```json
 {
@@ -100,4 +104,58 @@ module.exports = {
     "build"
   ]
 }
+```
+
+<hr>
+
+## ✔ Create a "components" folder under "src" folder. And add "Header.jsx", "HeroSection.jsx", "Categories.jsx", "Campaigns.jsx", "Favorites.jsx", "MobileApp.jsx", "Cards.jsx", "Footer.jsx" components and import them in "App.js" 👇
+
+```javascript
+import Header from "components/Header"
+import HeroSection from "components/HeroSection"
+import Categories from "components/Categories"
+import Campaigns from "components/Campaigns"
+import Favorites from "components/Favorites"
+import MobileApp from "components/MobileApp"
+import Cards from "components/Cards"
+import Footer from "components/Footer"
+
+function App() {
+  return (
+    <>
+      <Header />
+      <HeroSection/>
+      <Categories/>
+      <Campaigns/>
+      <Favorites/>
+      <MobileApp/>
+      <Cards/>
+      <Footer/>
+    </>
+  );
+}
+
+export default App;
+```
+
+<hr>
+
+## ✏ By default, Tailwind makes the entire default color palette available as background colors. You can customize your color palette by editing theme.colors or theme.extend.colors in your "tailwind.config.js" file 👇
+
+```javascript
+theme: {
+    extend: {
+      backgroundColor: {
+        'brand-color': '#5d3ebc'
+      }
+    },
+  },
+```
+
+<hr>
+
+## 🚩 For "Header.jsx" copy the src of "getir" images from "https://getir.com/" and add the other links 👇
+
+```javascript
+
 ```
