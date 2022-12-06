@@ -1,4 +1,5 @@
 # <center>✨ GETIR CLONE - FRONTEND ✨</center>
+# <center>✨ REACT & TAILWIND ✨</center>
 
 ## 💻 Create React App 👇
 
@@ -145,9 +146,11 @@ export default App;
 ```javascript
 theme: {
     extend: {
-      backgroundColor: {
-        'brand-color': '#5d3ebc'
-      }
+      colors: {
+        'brand-color': '#4c3398',
+        'primary-brand-color': '#5d3ebc',
+        'secondary-brand-color': '#7849f7'
+      },
     },
   },
 ```
@@ -219,13 +222,21 @@ export default Header;
 npm install react-slick --save
 ```
 
-## ✏ Add the url to "tailwind.css" 👇
+## ✏ Add these urls to "tailwind.css" 👇
 
 ```css
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
 ```
 
-## 🚩 Start to write "Header.jsx" 👇
+## 💻 Install "react-flags-select" (A React library that provides a customizable SVG flags select components and standalone SVG flags components.) for for selection country code of the phone. [view...](https://www.npmjs.com/package/react-flags-select)👇
+
+```bash
+yarn add react-flags-select
+npm install react-flags-select --save
+```
+
+## 🚩 Start to write "HeroSection.jsx" 👇
 
 ```javascript
 
